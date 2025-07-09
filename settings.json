@@ -1,0 +1,26 @@
+{
+    "links": [
+        {
+            "name": "Home",
+            "link": "/"
+        },
+        {
+            "name": "Services",
+            "link": "/Services"
+        },
+        {
+            "name": "Portfolio",
+            "link": "/Portfolio"
+        },
+        {
+            "name": "About Us",
+            "link": "/About-us"
+        }
+    ],
+    "buttons": [
+        {
+            "name": "get started",
+            "link": "#"
+        }
+    ]
+}
