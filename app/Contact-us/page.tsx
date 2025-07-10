@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <div className='h-screen w-full flex justify-center items-center'>
         <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751821737/IMG_3296_twidcm.jpg" alt="" className='absolute top-0 left-0 w-screen h-screen object-cover -z-10'/>
-    <div className="max-w-xl  p-6 mt-10 bg-white shadow-2xl rounded-2xl">
+    <div className="max-w-xl  p-6 mt-10 bg-white shadow-2xl rounded-2xl mx-10">
       <h2 className="text-3xl font-bold mb-6 text-center">Get In Touch!</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input

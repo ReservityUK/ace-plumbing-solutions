@@ -35,9 +35,9 @@ export default function MobileNav() {
     }
 
     return (
-        <div className="w-screen fixed lg:hidden top-0 bg-white/20 shadow-xl z-50">
+        <div className="w-screen fixed lg:hidden top-0 bg-white/80 shadow-xl z-50">
             <div className="flex w-screen justify-between items-center p-3 px-10 bg-transparent">
-                <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751784778/logo_cjqpyt.png" alt="" className="h-14 z-50"/>
+                <a href="/"><img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751784778/logo_cjqpyt.png" alt="" className="h-14 z-50"/></a>
                 <div className="flex justify-center items-center gap-4 z-50">
                     {isOpen ? (
                     <a
