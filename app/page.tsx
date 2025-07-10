@@ -11,6 +11,11 @@ import { GiKitchenTap } from "react-icons/gi";
 import { GoDotFill } from "react-icons/go";
 import { FaAward } from "react-icons/fa";
 import ImageGallery from "./components/ImageGallery";
+import { FaHandshake } from "react-icons/fa";
+import { GiReceiveMoney } from "react-icons/gi";
+import { FaHome } from "react-icons/fa";
+
+
 
 
 
@@ -29,25 +34,21 @@ const images = [
   let choose = [
     {
       "name": "100% Customer Satisfaction",
-      "description": "",
-      "icon": <LuSiren size={40}/>,
+      "description": "We’re committed to delivering top-quality workmanship and outstanding service every time. Our job isn’t done until you’re completely happy. Your satisfaction is our priority.",
+      "icon": <FaHandshake size={40}/>,
       
     },
     {
-      "name": "Bathroom Design & Renovation",
-      "icon": <FaPencilRuler size={40}/>
+      "name": "Competitive Pricing",
+      "description": "We offer fair, transparent pricing without compromising on quality. With us, you get great value for your money. No hidden fees, just honest rates you can trust.",
+      "icon": <GiReceiveMoney size={40}/>,
+      
     },
     {
-      "name": "Walk in Showers & Wet Rooms",
-      "icon": <FaShower size={40}/>
-    },
-    {
-      "name": "Bathroom & Kitchen Plumbing",
-      "icon": <MdOutlinePlumbing size={40}/>
-    },
-    {
-      "name": "Blocked Drain Repairs",
-      "icon": <GiKitchenTap size={40}/>
+      "name": "Solutions That Last",
+      "description": "We use premium materials and industry-leading tools to deliver plumbing work that’s built to last. Whether it’s a repair or a full installation, our solutions add long-term value to your property improving reliability, efficiency, and even resale appeal.",
+      "icon": <FaHome size={40}/>,
+      
     }
   ]
 
@@ -137,7 +138,7 @@ const images = [
           </div>
         </div>
       </div>
-      <div className="my-24 w-full text-black mt-10 bg-gray-100">
+      <div className=" w-full text-black mt-10 bg-gray-100 rounded-2xl">
         <div className="flex justify-center flex-col gap-10 py-10">
           <div className="text-xl font-bold rounded-full flex flex-col justify-center items-center">
             <h1 className="text-center text-3xl font-semibold mb-2">Why Choose Us?</h1>
@@ -145,13 +146,14 @@ const images = [
           </div>
           <div className="mx-10">
             {
-              services.map((service, i) => (
+              choose.map((item, i) => (
                 <div
                   key={i}
                   className="flex flex-col justify-center items-center my-3 gap-5 bg-cover bg-center bg-gray-100 p-6 rounded-2xl"
                 >
-                  <span className="bg-white p-3 rounded-2xl">{service.icon}</span>
-                  <h1 className="font-medium text-2xl">{service.name}</h1>
+                  <span className="bg-white p-3 rounded-2xl">{item.icon}</span>
+                  <h1 className="font-medium text-2xl text-center">{item.name}</h1>
+                  <p className="text-center">{item.description}</p>
                 </div>
               ))
             }
