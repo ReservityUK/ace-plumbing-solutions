@@ -13,7 +13,7 @@ export default function ImageGallery({ images }: ImageGalleryProps): JSX.Element
   return (
     <div>
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-20">
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-5">
         {images.map((src, idx) => (
           <div key={idx} className="cursor-pointer">
             <img
