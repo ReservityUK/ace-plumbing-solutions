@@ -67,7 +67,7 @@ export default function MobileNav() {
                     closed: { y: "-100%", opacity: 0, transitionEnd: { display: "none" } },
                 }}
                 transition={{ duration: 0.3 }}
-                className="fixed top-0 left-0 bg-gray-200 shadow-md z-10 h-screen w-screen p-3"
+                className="fixed top-0 left-0 bg-white shadow-md z-10 h-screen w-screen p-3"
             >
                 <div className="h-full w-full flex flex-col justify-center">
                     <motion.ul
@@ -78,6 +78,7 @@ export default function MobileNav() {
                     >
                         {settings.links.map((link, index) => (
                             <motion.li
+                                onClick={() => setIsOpen(false)}
                                 key={index}
                                 animate={isOpen ? "open" : "closed"}
                                 variants={{

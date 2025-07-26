@@ -4,6 +4,8 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import { Navbar } from "./components/navbar";
 import MobileNav from "./components/mobileNavbar";
+import CallMe from "./components/callMe";
+import Footer from "./components/Footer";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -26,9 +28,11 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased`}
       >
+        <CallMe />
         <MobileNav />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
