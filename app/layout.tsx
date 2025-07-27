@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar";
 import MobileNav from "./components/mobileNavbar";
 import CallMe from "./components/callMe";
 import Footer from "./components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased`}
       >
+        <SpeedInsights />
         <CallMe />
         <MobileNav />
         <Navbar />
