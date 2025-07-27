@@ -5,7 +5,9 @@ export const Navbar = () => {
         <div className="fixed w-full top-5 z-50">
             <div className="flex justify-center text-white">
                 <div className="h-20 w-3/4 bg-black/50 lg:flex rounded-full backdrop-blur-3xl hidden justify-between items-center drop-shadow-2xl px-5">
-                    <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751784778/logo_cjqpyt.png" alt="" className="p-4 max-w-full max-h-full object-contain invert" />
+                    <a href="/" className="p-4 w-40 object-contain invert">                    
+                    <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751784778/logo_cjqpyt.png" alt="" className="" />
+                    </a>
                     <div className="">
                         <ul className="flex gap-6 h-full">
                             <a href="/"><li className="relative transition duration-300 ease-in-out hover:text-gray-300

@@ -13,7 +13,7 @@ export default function ImageGallery({ images }: ImageGalleryProps): JSX.Element
   return (
     <div>
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-5">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-5">
         {images.map((src, idx) => (
           <div key={idx} className="cursor-pointer">
             <img
@@ -21,7 +21,7 @@ export default function ImageGallery({ images }: ImageGalleryProps): JSX.Element
               alt={`Image ${idx + 1}`}
               width={600}
               height={400}
-              className="rounded shadow"
+              className="rounded-2xl shadow hover:drop-shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-102 hover:shadow-lg"
               onClick={() => setSelectedImage(src)}
             />
           </div>
