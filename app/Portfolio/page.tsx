@@ -1,3 +1,5 @@
+"use server"
+
 import { Button } from "@heroui/button";
 import ImageGallery from "../components/ImageGallery";
 
@@ -20,7 +22,7 @@ const images: string[] = [
   'https://res.cloudinary.com/duezzgkri/image/upload/v1751821715/IMG_3854_kmzvkh.jpg',
 ];
 
-export default function Portfolio(){
+export default async function Portfolio(){
     return (
         <div className="mt-30 flex flex-col mx-5 gap-2">
         <h1 className="text-3xl font-semibold">Portfolio</h1>

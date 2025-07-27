@@ -1,3 +1,5 @@
+"use server"
+
 import { Button } from "@heroui/button";
 import AutoSlideshow from "./components/AutoSlideShow";
 import { FaAward } from "react-icons/fa";
@@ -10,15 +12,7 @@ import { AiFillClockCircle } from "react-icons/ai";
 import { FaCheck } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
 
-
-
-
-
-
-
-
-
-export default function Home() {
+export default async function Home() {
 
 
   const images = [
@@ -86,6 +80,7 @@ export default function Home() {
         <div className="h-full w-full flex flex-col md:mt-0 md:flex-row items-center justify-center">
           <div className="xl:w-1/2 w-3/4 md:mx-14">
             <div className="flex flex-col gap-2">
+              <p className="font-bold">Welcome to ACE Plumbing Solutions</p>
               <span className="text-4xl md:text-6xl font-bold">Professional & Emergency Plumbing Services in Staffordshire & Cheshire</span>
               <br />
               <span className="text-xl">Serving homes & businesses across Staffordshire and Cheshire, ACE Plumbing Solutions delivers expert plumbing repairs, maintenance, and installations with a reputation built on quality and trust.</span>
@@ -116,14 +111,17 @@ export default function Home() {
         </a>
       </div>
       <div className="flex flex-col justify-center items-center w-full mt-10 px-5 lg:px-10">
-        <h1 className="text-2xl font-semibold">Our Services</h1>
+        <div className="text-left w-full">
+        <p className="font-bold">Here Are Our Most Popular Services</p>
+        <h1 className="text-7xl font-semibold">Our Services</h1>
+        </div>
         <div className="grid grid-cols-1 w-full gap-5 mt-4 lg:grid-cols-2">
           {
             services.map((service, key) => (
               <div
                 key={key}
                 className="h-20 bg-no-repeat bg-cover bg-center text-white text-xl bg-blend-multiply 
-                text-center flex items-center rounded-2xl bg-black/40 lg:h-44 lg:text-2xl hover:drop-shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-102 hover:shadow-lg lg:grayscale lg:hover:grayscale-0"
+                text-center flex items-center rounded-2xl bg-black/40 lg:h-64 lg:text-2xl hover:drop-shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-102 hover:shadow-lg lg:grayscale lg:hover:grayscale-0"
                 //className="rounded-2xl w-[90%] p-6 relative bg-black/40 bg-no-repeat bg-cover bg-center text-white text-xl bg-blend-multiply lg:h-32 lg:mx-5"
                 style={{ backgroundImage: `url(${service.img})` }}
               >
@@ -134,26 +132,26 @@ export default function Home() {
         </div>
       </div>
       <div className="mx-5 lg:mx-10 mb-10">
-        <div className="w-full text-black mt-10 bg-[#F9F3EF] h-full xl:h-screen rounded-2xl flex">
+        <div className="w-full text-black mt-10 bg-[#F9F3EF] h-full rounded-2xl flex">
           <div className="flex justify-center flex-col py-10 lg:flex-row lg:justify-start lg:mx-10">
             <div className="text-xl font-bold rounded-full flex flex-col justify-center items-center lg:items-start lg:mx-20 lg:w-1/2">
               <div className="mb-3">
               <FaHandshake size={40} />
               </div>
-              <p className="text-sm text-center mx-7 lg:mx-0 lg:font-bold lg:text-8xl lg:text-left font-bold mb-3">Plumbing solutions that work for you</p>
               <h1 className="text-center text-5xl font-semibold mb-2 lg:text-lg">Why Choose ACE?</h1>
-              <p className="lg:text-md lg:font-light hidden lg:block lg:mt-6 lg:w-[80%]">3rd generation plumber with extensive experience in all aspects of domestic plumbing. Walk in shower and bathroom specialists. We offer full bathroom re-fit services, tiling and shower panelling; alongside a true No job too small operation for maintenance and repairs.</p>
+              <p className="text-sm text-center mx-7 lg:mx-0 lg:font-bold lg:text-8xl lg:text-left font-bold mb-3">Plumbing solutions that work for you</p>
+              <p className="lg:text-md lg:font-light hidden lg:block lg:mt-6 lg:w-[80%] text-lg">3rd generation plumber with extensive experience in all aspects of domestic plumbing. Walk in shower and bathroom specialists. We offer full bathroom re-fit services, tiling and shower panelling; alongside a true No job too small operation for maintenance and repairs.</p>
             </div>
-            <div className="mx-3 lg:w-1/2 lg:grid lg:grid-cols-1">
+            <div className="mx-3 lg:w-1/2 lg:grid lg:grid-cols-2">
               {
                 choose.map((item, i) => (
                   <div
                     key={i}
-                    className="flex flex-col justify-center items-center gap-3 bg-cover bg-center rounded-2xl my-10"
+                    className="flex flex-col justify-center items-center gap-3 bg-cover bg-center rounded-2xl my-10 md:my-3"
                   >
                     <span className="bg-white p-3 rounded-2xl shadow-2xl">{item.icon}</span>
                     <h1 className="font-normal text-2xl text-center">{item.name}</h1>
-                    <p className="text-sm text-center w-3/4">{item.description}</p>
+                    <p className="text-sm text-center w-3/4 ">{item.description}</p>
                   </div>
                 ))
               }
@@ -164,9 +162,9 @@ export default function Home() {
       <div className="w-full px-5 lg:px-10 mb-10">
         <div className="flex flex-col md:flex-row text-center justify-end items-center">
           <div className="md:w-1/2 flex justify-start items-center">
-            <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1753640381/481358116_9611535752244677_5508023411106141824_n_sioybc.jpg" alt="" className="object-contain rounded-full px-5 mt-2 h-72 sm:h-72" />
+            <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1753640381/481358116_9611535752244677_5508023411106141824_n_sioybc.jpg" alt="" className="object-contain rounded-full px-5 mt-2 h-72 md:h-full md:w-3/4" />
           </div>
-          <div className="md:w-1/2 text-left my-10">
+          <div className="md:w-1/2 text-left my-10 md:h-screen md:flex md:flex-col md:justify-center">
             <FaCheck size={40} className="mb-3"/>
             <h3 className="text-left font-bold">10+ Years Experience</h3>
             <h1 className="font-bold text-7xl">About Us</h1>
@@ -185,7 +183,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mx-5 lg:mx-10">
+      <div className="mx-5 lg:mx-10 mb-20">
         <div className="w-full rounded-2xl flex flex-col justify-center items-center bg-[#1B3C53] shadow-2xl">
           <div className="mb-1 mt-8 rounded-4xl flex flex-col justify-center items-center text-white text-3xl w-3/4">
             <FaAward size={50} className="mb-3" />
@@ -197,12 +195,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-full w-full flex flex-col items-center px-5 lg:px-10 mt-10 mb-10">
+      <div className="h-full w-full flex flex-col items-center px-5 lg:px-10 mt-10 mb-20">
         <div className="text-3xl text-center font-semibold">
           <div className="flex justify-center">
               <MdOutlineWork size={50} className="" />
           </div>
-          <p className="text-sm font-bold">Showcasing ACE's latest projects</p>
+          <p className="text-sm font-bold">Showcasing ACE's Latest Projects</p>
           <h1 className="text-5xl">Our Work</h1>
         </div>
         <ImageGallery images={images} />
