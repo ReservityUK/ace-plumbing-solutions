@@ -24,10 +24,10 @@ const images: string[] = [
 
 export default async function Portfolio(){
     return (
-        <div className="mt-30 flex flex-col mx-5 gap-2">
+        <div className="mt-30 flex flex-col mx-5 gap-2 mb-20">
         <h1 className="text-3xl font-semibold">Portfolio</h1>
         <p>Think we can transform your home? Click the button below to get in touch!</p>
-        <a href="/Contact-us"><Button className="mt-5 border mr-10 p-3 rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
+        <a href="/Contact-us"><Button className="mt-2 border mr-10 p-3 rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
     text-black hover:text-white 
     before:absolute before:h-0 before:w-0 before:rounded-full before:bg-black before:duration-500 before:ease-out 
     hover:shadow-white hover:before:h-56 hover:before:w-56">

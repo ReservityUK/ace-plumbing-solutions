@@ -52,23 +52,23 @@ export default async function Home() {
   let services = [
     {
       "name": "Bathroom Renovation & Design",
-      "link": "/services/emergency-plumbing",
+      "link": "/services/bathroom-renovation-design",
       "img": "https://res.cloudinary.com/duezzgkri/image/upload/v1752089810/IMG_4543_nr2may.jpg",
 
     },
     {
       "name": "Walk in Showers & Wet Rooms",
-      "link": "/services/walk-in-shower-wet-rooms",
+      "link": "/services/walk-in-showers-wet-rooms",
       "img": "https://res.cloudinary.com/duezzgkri/image/upload/v1751821726/IMG_6814_rkvot1.jpg"
     },
     {
       "name": "Maintenance & Repairs",
-      "link": "/services/walk-in-shower-wet-rooms",
+      "link": "/services/maintenance-repairs",
       "img": "https://images.unsplash.com/photo-1620653713380-7a34b773fef8?q=80&w=945&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "name": "Boiling & Central Heating",
-      "link": "/services/bathrooms-kitchens",
+      "name": "Boilers & Central Heating",
+      "link": "/services/boilers-heating",
       "img": "https://images.unsplash.com/photo-1663602692362-80e4564384c0?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
@@ -99,7 +99,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div id="services" className="flex w-full justify-center gap-10 mt-8 items-center">
+      <div id="services" className="flex w-full justify-center gap-10 my-4 items-center">
         <a href="https://www.checkatrade.com/trades/aceplumbingsolutions" target="_blank">
           <img src="https://www.checkatrade.com/static/checkatradefb.png" alt="" className="w-20 object-contain " />
         </a>
@@ -110,16 +110,16 @@ export default async function Home() {
           <img src="https://aacroadmarkingsltd.co.uk/wp-content/uploads/2021/03/yell-5-stars.png" alt="" className="w-20 object-contain" />
         </a>
       </div>
-      <div className="flex flex-col justify-center items-center w-full mt-10 px-5 lg:px-10">
+      <div className="flex flex-col justify-center items-center w-full mt-7 px-5 lg:px-10">
         <div className="text-left w-full">
-        <p className="font-bold">Here Are Our Most Popular Services</p>
-        <h1 className="text-7xl font-semibold">Our Services</h1>
+        {/* <p className="font-bold text-center">Here Are Our Most Popular Services</p> */}
+        <h1 className="text-3xl font-semibold text-center">Our Services</h1>
         </div>
         <div className="grid grid-cols-1 w-full gap-5 mt-4 lg:grid-cols-2">
           {
             services.map((service, key) => (
-              <div
-                key={key}
+              <a href={service.link} key={key}>
+                <div
                 className="h-20 bg-no-repeat bg-cover bg-center text-white text-xl bg-blend-multiply 
                 text-center flex items-center rounded-2xl bg-black/40 lg:h-64 lg:text-2xl hover:drop-shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-102 hover:shadow-lg lg:grayscale lg:hover:grayscale-0"
                 //className="rounded-2xl w-[90%] p-6 relative bg-black/40 bg-no-repeat bg-cover bg-center text-white text-xl bg-blend-multiply lg:h-32 lg:mx-5"
@@ -127,6 +127,7 @@ export default async function Home() {
               >
                 <h1 className="pl-3">{service.name}</h1>
               </div>
+              </a>
             ))
           }
         </div>
@@ -165,25 +166,20 @@ export default async function Home() {
             <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1753640381/481358116_9611535752244677_5508023411106141824_n_sioybc.jpg" alt="" className="object-contain rounded-full px-5 mt-2 h-72 md:h-full md:w-3/4" />
           </div>
           <div className="md:w-1/2 text-left my-10 md:h-screen md:flex md:flex-col md:justify-center">
-            <FaCheck size={40} className="mb-3"/>
-            <h3 className="text-left font-bold">10+ Years Experience</h3>
-            <h1 className="font-bold text-7xl">About Us</h1>
+            <FaCheck size={40} className="mb-1 text-center mx-auto"/>
+            <h3 className="text-center font-bold">10+ Years Experience</h3>
+            <h1 className="font-bold text-7xl text-center mb-5">About Us</h1>
             <p className="mt-2 text-left">At ACE Plumbing Solutions, we bring over 10 years of professional experience and more than 35 years of family expertise in plumbing and heating to homes and businesses across Staffordshire and Cheshire.<br /><br />
 
               We specialise in all aspects of domestic and commercial plumbing, including heating and plumbing services, maintenance and repairs, bespoke bathroom design and fitting, and the installation of walk-in showers and wet rooms. Whether you need a small repair or a full bathroom renovation, we deliver reliable, high-quality workmanship tailored to your needs.<br /><br />
 
               Fully Gas Safe registered and backed by comprehensive insurance, ACE Plumbing Solutions is committed to safety, quality, and customer satisfaction. We take pride in offering transparent, cost-effective solutions with minimal disruption to your property.
             </p>
-            <a href="/Portfolio" className=""><Button className="mt-5 border rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
-  text-black hover:text-white 
-  before:absolute before:h-0 before:w-0 before:rounded-full before:bg-black before:duration-500 before:ease-out 
-  hover:shadow-white hover:before:h-56 hover:before:w-56">
-          <span className="relative">Learn More</span>
-        </Button></a>
+            
           </div>
         </div>
       </div>
-      <div className="mx-5 lg:mx-10 mb-20">
+      <div className="mx-5 lg:mx-10 mb-10">
         <div className="w-full rounded-2xl flex flex-col justify-center items-center bg-[#1B3C53] shadow-2xl">
           <div className="mb-1 mt-8 rounded-4xl flex flex-col justify-center items-center text-white text-3xl w-3/4">
             <FaAward size={50} className="mb-3" />
@@ -195,7 +191,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="h-full w-full flex flex-col items-center px-5 lg:px-10 mt-10 mb-20">
+      <div className="h-full w-full flex flex-col items-center px-5 lg:px-10 my-10">
         <div className="text-3xl text-center font-semibold">
           <div className="flex justify-center">
               <MdOutlineWork size={50} className="" />
