@@ -111,12 +111,15 @@ export default function MobileNav() {
                             scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
                         }}
                     >
-<Button className="border rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
+                        <a href="/contact">
+                            <Button className="border rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
     text-black hover:text-white 
     before:absolute before:h-0 before:w-0 before:rounded-full before:bg-black before:duration-500 before:ease-out 
     hover:shadow-white hover:before:h-56 hover:before:w-56">
           <span className="relative z-10">Get A Quote</span>
-        </Button>                    </motion.div>
+        </Button>            
+                        </a>
+        </motion.div>
                 </div>
 
             </motion.nav>

@@ -70,9 +70,9 @@ export default function Contact() {
           className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">Select a Service</option>
-          <option value="Emergency Plumbing">Emergency Plumbing</option>
-          <option value="Renovation">Renovation</option>
-          <option value="Walk-In Shower">Walk-In Shower</option>
+          <option value="Emergency Plumbing">Bathroom Design & Renovation</option>
+          <option value="Renovation">Walk-in Showers & Wet Rooms</option>
+          <option value="Walk-In Shower">Maintenance & Repairs</option>
           <option value="Other">Other</option>
         </select>
         <textarea

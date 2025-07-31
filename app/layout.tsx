@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,12 +30,14 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased`}
       >
+        <Navbar />
+        <MobileNav />
+        <div className="2xl:px-44">
         <SpeedInsights />
         <CallMe />
-        <MobileNav />
-        <Navbar />
         {children}
         <Footer />
+        </div>
       </body>
     </html>
   );

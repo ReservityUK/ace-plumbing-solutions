@@ -9,6 +9,9 @@ import { FaRegThumbsUp } from "react-icons/fa";
 import { FaPercentage } from "react-icons/fa";
 import { MdOutlineWork } from "react-icons/md";
 import ImageGallery from "@/app/components/ImageGallery";
+import { MdDesignServices } from "react-icons/md";
+
+
 
 const images = [
     'https://res.cloudinary.com/duezzgkri/image/upload/v1751821707/IMG_8970_nrj5z7.jpg',
@@ -33,15 +36,15 @@ let choose = [
 
     },
     {
+      "name": "Bespoke Design",
+      "description": "Our bespoke bathroom design and renovation service offers fully tailored solutions to transform your space with style and functionality. We specialise in creating custom bathroom designs that reflect your personal taste and meet your lifestyle needs.",
+      "icon": <MdDesignServices size={40} />,
+    },
+    {
       "name": "Minimal Distruption",
       "description": "As a 3rd-generation plumber with decades of family experience, I bring expert knowledge and trusted craftsmanship to every job, specialising in all aspects of domestic plumbing.",
       "icon": <FaRegThumbsUp size={40} />,
 
-    },
-    {
-      "name": "OAP Discount",
-      "description": "We use premium materials and industry-leading tools to deliver plumbing work that’s built to last. Whether it’s a repair or a full installation, our solutions add long-term value to your property improving reliability, efficiency, and even resale appeal.",
-      "icon": <FaPercentage size={40} />,
     },
     {
       "name": "Built to Last",
@@ -55,9 +58,9 @@ let choose = [
 export default function BathroomRenovationDesign(){
     return (
         <>
-        <div className="w-full">
+        <div className="w-full 3xl:px-60">
         <div 
-        className="h-72 relative bg-blend-multiply bg-cover rounded-b-2xl bg-black/40 lg:w-3/4 lg:bg-center lg:mt-28 lg:rounded-2xl lg:mx-auto"
+        className="h-72 relative bg-blend-multiply bg-cover rounded-b-2xl bg-black/40  lg:bg-center lg:mt-28 lg:rounded-2xl lg:mx-10"
         style={{ backgroundImage: "url(https://res.cloudinary.com/duezzgkri/image/upload/v1751783012/hero1_jukrud.jpg)" }}
         >
         <div className="flex w-full h-full justify-start items-end p-5 font-bold">
@@ -67,7 +70,7 @@ export default function BathroomRenovationDesign(){
         <div className="mt-5 text-right mx-4 flex flex-col justify-end items-end lg:mx-10 lg:justify-center lg:items-center">
         <p className="font-light">Experts in Shower Installations</p>
         <hr className="my-2 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 w-[75%]"/>
-        <h1 className="text-4xl font-bold">Transform your bathroom with our Bathroom Design & Renovation solutions</h1>
+        <h1 className="text-4xl font-bold lg:text-center">Transform your bathroom with our Bathroom Design & Renovation solutions</h1>
         </div>
          <div className="flex flex-row justify-between lg:justify-center lg:gap-24 items-center mx-5 mt-1">
             {
@@ -78,12 +81,13 @@ export default function BathroomRenovationDesign(){
                 ))
             }
         </div>
-        <div className="flex flex-row mx-10 justify-center gap-5 flex-1 my-5">
+        <div className="flex flex-row mx-10 justify-center gap-5 flex-1 my-5 md:h-[70vh]">
             <div className="w-1/2 flex">   
                 <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1752089814/IMG_4407_hqgqba.jpg" alt="" className="rounded-xl object-cover"/>
             </div>  
-            <div className="w-1/2 flex">
-                <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751821707/IMG_8970_nrj5z7.jpg" alt="" className="rounded-xl object-cover"/>
+            <div className="w-1/2 flex flex-col gap-5 justify-center">
+                <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751821707/IMG_8970_nrj5z7.jpg" alt="" className="rounded-xl object-cover overflow-hidden"/>
+                <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1752089811/ba475b3b-1c12-4edd-becf-11863637139a_hvhpy0.jpg" alt="" className="rounded-xl object-cover overflow-hidden"/>
             </div>
         </div>
         <div className="w-full flex justify-center">
@@ -95,19 +99,18 @@ export default function BathroomRenovationDesign(){
         </Button></a>
         </div>
                 <div className="mx-5 lg:mx-10 mb-10">
-                    <div className="w-full text-white mt-10 bg-[#1B3C53] h-full rounded-2xl flex">
+                    <div className="w-full text-white mt-10 bg-[#1B3C53] h-full rounded-2xl">
                         <div className="flex justify-center flex-col py-10 lg:flex-row lg:justify-start lg:mx-10">
                             <div className="text-xl font-bold rounded-full flex flex-col justify-center items-center lg:items-start lg:mx-20 lg:w-1/2">
-                                <h1 className="text-center text-5xl font-semibold mb-2 lg:text-lg">You're in the right hands</h1>
-                                <p className="text-sm text-center mx-7 lg:mx-0 lg:text-8xl lg:text-left font-light mb-3">We've got the paperwork to back it up</p>
-                                <p className="lg:text-md lg:font-light hidden lg:block lg:mt-6 lg:w-[80%] text-lg">3rd generation plumber with extensive experience in all aspects of domestic plumbing. Walk in shower and bathroom specialists. We offer full bathroom re-fit services, tiling and shower panelling; alongside a true No job too small operation for maintenance and repairs.</p>
+                                <p className="text-sm text-center mx-7 lg:mx-0 lg:text-left font-light mb-3 lg:text-lg">We've got the paperwork to back it up</p>
+                                <h1 className="text-center mb-2 lg:text-8xl lg:text-left text-5xl font-bold">You're in the right hands</h1>
+                                <p className="lg:text-md font-light hidden lg:block lg:mt-6 lg:w-[80%] text-lg">3rd generation plumber with extensive experience in all aspects of domestic plumbing. Walk in shower and bathroom specialists. We offer full bathroom re-fit services, tiling and shower panelling; alongside a true No job too small operation for maintenance and repairs.</p>
                             </div>
-                            <div>
+                            <div className="flex justify-center flex-col w-1/4 items-center mx-auto">
                                 <a href="https://www.checkatrade.com/trades/aceplumbingsolutions" target="_blank">
-                                <img src="https://www.checkatrade.com/static/checkatradefb.png" alt="" className="w-32 mt-4 object-contain invert brightness-0 mx-auto" />
+                                <img src="https://www.checkatrade.com/static/checkatradefb.png" alt="" className="w-full mt-4 object-contain invert brightness-0 mx-auto" />
                             </a>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -125,7 +128,7 @@ export default function BathroomRenovationDesign(){
                 ))
               }
             </div>
-            <div className="h-full w-full flex flex-col items-center px-5 lg:px-10 my-10">
+            <div className="h-full w-full flex flex-col items-center px-5 lg:px-10 my-16">
                     <div className="text-3xl text-center font-semibold">
                       <p className="text-sm font-light">Like what you see?</p>
                       <h1 className="text-4xl">Check out your latest projects</h1>

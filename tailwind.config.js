@@ -1,4 +1,5 @@
-const { heroui } = require("@heroui/theme");
+// tailwind.config.js
+const {heroui} = require("@heroui/theme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -6,13 +7,10 @@ module.exports = {
     "./node_modules/@heroui/theme/dist/components/(button|ripple|spinner).js",
   ],
   theme: {
-    extend: {},
-    screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '3000px',
+    extend: {
+      screens: {
+        "5xl": "2000px"
+      }
     },
   },
   darkMode: "class",

@@ -32,7 +32,7 @@ export default async function Home() {
 
     },
     {
-      "name": "3rd Generation Plumber",
+      "name": "10+ Years Experience",
       "description": "As a 3rd-generation plumber with decades of family experience, I bring expert knowledge and trusted craftsmanship to every job, specialising in all aspects of domestic plumbing.",
       "icon": <LiaPeopleCarrySolid size={40} />,
 
@@ -75,7 +75,7 @@ export default async function Home() {
 
   return (
     <div className="">
-      <div className="w-full h-screen">
+      <div className="w-full h-screen xl:px-10">
         <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751783012/hero1_jukrud.jpg" alt="" className="h-full w-full object-cover bg-black opacity-25 xl:hidden absolute -z-30 rounded-b-3xl shadow-2xl" />
         <div className="h-full w-full flex flex-col md:mt-0 md:flex-row items-center justify-center">
           <div className="xl:w-1/2 w-3/4 md:mx-14">
@@ -94,7 +94,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden xl:block w-1/2 h-full bg-white [clip-path:polygon(10%_0%,100%_0%,100%_100%,0%_100%)]">
+          <div className="hidden xl:flex xl:justify-center xl:items-center w-1/2 h-full bg-white">
             <AutoSlideshow />
           </div>
         </div>
@@ -165,7 +165,7 @@ export default async function Home() {
           <div className="md:w-1/2 flex justify-start items-center">
             <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1753640381/481358116_9611535752244677_5508023411106141824_n_sioybc.jpg" alt="" className="object-contain rounded-full px-5 mt-2 h-72 md:h-full md:w-3/4" />
           </div>
-          <div className="md:w-1/2 text-left my-10 md:h-screen md:flex md:flex-col md:justify-center">
+          <div className="md:w-1/2 text-left my-5 md:h-screen md:flex md:flex-col md:justify-center">
             <FaCheck size={40} className="mb-1 text-center mx-auto"/>
             <h3 className="text-center font-bold">10+ Years Experience</h3>
             <h1 className="font-bold text-7xl text-center mb-5">About Us</h1>

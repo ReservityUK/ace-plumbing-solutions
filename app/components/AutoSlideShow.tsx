@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
     "https://res.cloudinary.com/duezzgkri/image/upload/v1751821737/IMG_3296_twidcm.jpg",
     "https://res.cloudinary.com/duezzgkri/image/upload/v1751821707/IMG_8970_nrj5z7.jpg",
     "https://res.cloudinary.com/duezzgkri/image/upload/v1752089838/IMG_6813_ck2zb0.jpg",
-    "https://res.cloudinary.com/duezzgkri/image/upload/v1752089826/IMG_3296_q7kyw5.jpg"
+    "https://res.cloudinary.com/duezzgkri/image/upload/v1751821690/IMG_4545_rflmof.jpg"
   ];
 
   export default function AutoSlideshow() {
@@ -21,7 +21,8 @@ import { useEffect, useState } from "react";
   }, []);
 
   return (
-    <div className="lg:relative w-full h-screen overflow-hidden z-10">
+    
+    <div className="lg:relative w-full h-[75%] overflow-hidden z-10 rounded-2xl">
       {images.map((src, index) => (
         <img
           key={index}

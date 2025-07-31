@@ -10,11 +10,11 @@
         },
         {
             "name": "Portfolio",
-            "link": "/Portfolio"
+            "link": "/portfolio"
         },
         {
             "name": "About Us",
-            "link": "/About-us"
+            "link": "/about"
         }
     ],
     "buttons": [
