@@ -14,7 +14,6 @@ import { MdOutlineWork } from "react-icons/md";
 
 export default async function Home() {
 
-
   const images = [
     'https://res.cloudinary.com/duezzgkri/image/upload/v1751821707/IMG_8970_nrj5z7.jpg',
     'https://res.cloudinary.com/duezzgkri/image/upload/v1751821715/IMG_3854_kmzvkh.jpg',
@@ -75,20 +74,20 @@ export default async function Home() {
 
   return (
     <div className="">
-      <div className="w-full h-screen xl:px-10">
+      {/* <div className="w-full h-screen xl:px-10">
         <img src="https://res.cloudinary.com/duezzgkri/image/upload/v1751783012/hero1_jukrud.jpg" alt="" className="h-full w-full object-cover bg-black opacity-25 xl:hidden absolute -z-30 rounded-b-3xl shadow-2xl" />
         <div className="h-full w-full flex flex-col md:mt-0 md:flex-row items-center justify-center">
           <div className="xl:w-1/2 w-3/4 md:mx-14">
             <div className="flex flex-col gap-2">
               <p className="font-bold">Welcome to ACE Plumbing Solutions</p>
-              <span className="text-4xl md:text-6xl font-bold">Professional & Emergency Plumbing Services in Staffordshire & Cheshire</span>
+              <h1 className="text-4xl md:text-6xl font-bold">Professional & Emergency Plumbing Services in Staffordshire & Cheshire</h1>
               <br />
               <span className="text-xl">Serving homes & businesses across Staffordshire and Cheshire, ACE Plumbing Solutions delivers expert plumbing repairs, maintenance, and installations with a reputation built on quality and trust.</span>
               <div className="">
                 <a href="/Contact-us"><Button className="mt-5 border mr-10 p-3 rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
     text-black hover:text-white 
     before:absolute before:h-0 before:w-0 before:rounded-full before:bg-black before:duration-500 before:ease-out 
-    hover:shadow-white hover:before:h-56 hover:before:w-56">
+    hover:shadow-white hover:before:h-56 hover:before:w-56">p
                   <span className="relative">Get A Quote</span>
                 </Button></a>
               </div>
@@ -98,6 +97,28 @@ export default async function Home() {
             <AutoSlideshow />
           </div>
         </div>
+      </div> */}
+      <div className="w-full h-screen grid grid-cols-1 lg:grid-cols-2 grid-rows-1 place-items-center bg-black lg:bg-white rounded-b-2xl">
+      <div className="lg:hidden absolute h-screen w-full z-10 opacity-40">
+        <AutoSlideshow />
+      </div>
+      <div className="p-10 flex flex-col gap-5 justify-center h-full text-white lg:text-black z-20">
+        <p className="font-bold">Welcome to ACE Plumbing Solutions</p>
+        <h1 className="text-4xl md:text-6xl font-bold">Professional & Emergency Plumbing Services in Staffordshire & Cheshire</h1>
+        <p className="text-xl">Serving homes & businesses across Staffordshire and Cheshire, ACE Plumbing Solutions delivers expert plumbing repairs, maintenance, and installations with a reputation built on quality and trust.</p>
+
+        <div className="">
+                <a href="/contact"><Button className="mt-5 border mr-10 p-3 rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
+    text-white hover:text-white 
+    before:absolute before:h-0 before:w-0 before:rounded-full before:bg-white before:duration-500 before:ease-out 
+    hover:shadow-white hover:before:h-56 hover:before:w-56 font-semibold">
+                  <span className="relative">Get A Quote</span>
+                </Button></a>
+              </div>
+      </div>
+      <div className="overflow-hidden h-full w-full p-20 hidden lg:block">
+        <AutoSlideshow />
+      </div>
       </div>
       <div id="services" className="flex w-full justify-center gap-10 my-4 items-center">
         <a href="https://www.checkatrade.com/trades/aceplumbingsolutions" target="_blank">
@@ -200,7 +221,7 @@ export default async function Home() {
           <h1 className="text-5xl">Our Work</h1>
         </div>
         <ImageGallery images={images} />
-        <a href="/Portfolio" className=""><Button className="mt-5 border rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
+        <a href="/portfolio" className=""><Button className="mt-5 border rounded-full hover:bg-gray-800 relative flex h-[50px] w-40 items-center justify-center overflow-hidden shadow-2xl transition-all 
   text-black hover:text-white 
   before:absolute before:h-0 before:w-0 before:rounded-full before:bg-black before:duration-500 before:ease-out 
   hover:shadow-white hover:before:h-56 hover:before:w-56">

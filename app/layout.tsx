@@ -32,12 +32,10 @@ export default function RootLayout({
       >
         <Navbar />
         <MobileNav />
-        <div className="2xl:px-44">
         <SpeedInsights />
         <CallMe />
         {children}
         <Footer />
-        </div>
       </body>
     </html>
   );
